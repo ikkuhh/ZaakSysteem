@@ -1,0 +1,13 @@
+version: "3.7"
+
+services:
+  web:
+    build: src/
+    command: python main.py
+    volumes:
+      - ./src:/app
+    ports:
+      - "6543:6543"
+    environment:
+      - PYTHONUNBUFFERED=1
+
